@@ -157,11 +157,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   line-height:1;
 }
 .brand__mark{
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   border-radius:8px;
   object-fit:contain;
   flex-shrink:0;
+  display:block;
 }
 .brand__name-dim{ color: var(--text-dim); font-weight:600; margin-left:2px; }
 
@@ -591,6 +592,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color: var(--text-dim);
   font-family: var(--font-display);
   font-size: 14px;
+}
+.footer__brand img{
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display:block;
+  flex-shrink:0;
 }
 .footer__nav{ display:flex; flex-wrap: wrap; justify-content:center; gap: 10px 22px; }
 .footer__nav a{
