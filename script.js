@@ -1,5 +1,5 @@
 /* ============================================================
-   MTD Studio — Coming Soon
+   MTD Studio Coming Soon
    Vanilla JS only: countdown, status pill clock, contact form
    ============================================================ */
 
@@ -124,12 +124,12 @@
       const action = form.getAttribute("action") || "";
       const isPlaceholder = action.includes("yourFormID");
 
-      // No real form backend configured yet — keep it graceful instead of
+      // No real form backend configured yet; keep it graceful instead of
       // sending a request that will fail.
       if (isPlaceholder) {
         e.preventDefault();
         status.textContent =
-          "Form isn't connected yet — add your Formspree endpoint in this page's HTML.";
+          "Form isn't connected yet; add your Formspree endpoint in this page's HTML.";
         status.className = "form-status is-error";
         return;
       }
@@ -150,7 +150,7 @@
         .then((res) => {
           if (res.ok) {
             form.reset();
-            status.textContent = "Thanks — we'll be in touch shortly.";
+            status.textContent = "Thanks, we'll be in touch shortly.";
             status.className = "form-status is-success";
           } else {
             throw new Error("Request failed");

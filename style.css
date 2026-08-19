@@ -154,8 +154,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-size: 17px;
   letter-spacing: -0.01em;
   white-space:nowrap;
+  line-height:1;
 }
-.brand__mark{ border-radius:8px; }
+.brand__mark{
+  width: 34px;
+  height: 34px;
+  border-radius:8px;
+  object-fit:contain;
+  flex-shrink:0;
+}
 .brand__name-dim{ color: var(--text-dim); font-weight:600; margin-left:2px; }
 
 .site-nav{
