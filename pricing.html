@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Pricing — MTD Studio</title>
+<meta name="description" content="Starting prices for MTD Studio's drafting, 3D modelling and graphic design services. Every project is scoped individually.">
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<meta name="theme-color" content="#0b0b0d">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+<div class="bg-scene" aria-hidden="true">
+  <span class="orb orb--red"></span>
+  <span class="orb orb--gray"></span>
+  <span class="orb orb--dim"></span>
+  <div class="grain"></div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="index.html" class="brand">
+      <img src="assets/favicon.png" alt="" class="brand__mark" width="30" height="30">
+      <span class="brand__name">MTD<span class="brand__name-dim">Studio</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="studio.html">Studio</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="site-header__actions">
+      <span class="clock-pill" id="clock">--:--</span>
+      <a href="contact.html" class="header-cta">Start a Project</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="studio.html">Studio</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="mobile-nav__cta">Start a Project</a>
+  </nav>
+</header>
+
+<!-- ===================== DISCLAIMER DIALOG (shown once per session) ===================== -->
+<dialog class="disclaimer-dialog" id="pricingDisclaimer">
+  <div class="disclaimer-dialog__body">
+    <h2>Before you view our pricing</h2>
+    <p>Every project is different. Published prices are <strong>starting prices</strong>
+      intended to provide an indication of cost, not a fixed quotation.</p>
+    <p>Final pricing is determined after reviewing the project scope, supplied
+      information, complexity, number of deliverables, revisions and required
+      turnaround time. Additional work outside the agreed scope will be quoted
+      separately or charged at the applicable hourly rate.</p>
+    <p>MTD Studio provides technical drafting, CAD conversion, documentation
+      and 3D modelling services. These services do not constitute
+      architectural professional services or professional sign-off. Where
+      professional approval or statutory submission is required, the client
+      remains responsible for appointing the appropriate registered
+      professional.</p>
+  </div>
+  <div class="disclaimer-dialog__actions">
+    <a href="contact.html" class="cta-secondary">Ask a Question</a>
+    <button type="button" class="cta-primary" data-close-dialog style="border:none; cursor:pointer;">I Understand</button>
+  </div>
+</dialog>
+
+<div class="site">
+
+  <div class="page-header">
+    <p class="eyebrow">Work With Me</p>
+    <h1>Pricing</h1>
+    <p>Transparent starting prices for drafting, 3D modelling and graphic
+      design work. Every project is scoped individually — the figures below
+      are a guide, not a fixed quote.</p>
+  </div>
+
+  <section class="section section--tight" style="text-align:center;">
+    <button type="button" id="reopenDisclaimer" class="disclaimer-reopen" style="cursor:pointer;">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+      View Pricing Policy
+    </button>
+  </section>
+
+  <!-- ===================== DRAFTING & 3D ===================== -->
+  <section class="section">
+    <div class="section-head section-head--left">
+      <h2>Drafting &amp; 3D Pricing</h2>
+      <p>Designed to remain accessible while ensuring each project is fairly
+        priced according to its location, scale and level of work required.</p>
+    </div>
+
+    <div class="service-group">
+      <h4>2D House Plan Drafting — priced per m² of building area</h4>
+      <table class="pricing-table">
+        <thead>
+          <tr><th>Category</th><th>Rate</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Village / Rural</td><td class="price">R25 / m²</td></tr>
+          <tr><td>Town / Township</td><td class="price">R45 / m²</td></tr>
+          <tr><td>Business / Public</td><td class="price">R50 / m²</td></tr>
+        </tbody>
+      </table>
+
+      <p style="color:var(--text-dim); font-size:13.5px; line-height:1.6; margin: 20px 0 0;">
+        <strong style="color:var(--text);">Minimum project area:</strong> the
+        minimum billable area for house-plan drafting is 75 m² — projects
+        below this are calculated at the 75 m² minimum.
+      </p>
+
+      <div class="example-grid">
+        <div class="example-card">
+          <strong>60 m² rural project</strong>
+          75 m² × R25 = <span style="color:var(--red); font-weight:700;">R1,875</span>
+        </div>
+        <div class="example-card">
+          <strong>120 m² township project</strong>
+          120 m² × R45 = <span style="color:var(--red); font-weight:700;">R5,400</span>
+        </div>
+        <div class="example-card">
+          <strong>200 m² business project</strong>
+          200 m² × R50 = <span style="color:var(--red); font-weight:700;">R10,000</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="service-group">
+      <h4>3D Modelling &amp; Visualisation</h4>
+      <div class="price-cards">
+        <div class="price-card">
+          <h4>Basic 3D Model</h4>
+          <p class="price-card__amount">From R1,500</p>
+          <p>Suitable for basic massing and visual representation based on supplied drawings or information.</p>
+        </div>
+        <div class="price-card">
+          <h4>Detailed 3D Model</h4>
+          <p class="price-card__amount">From R2,500</p>
+          <p>For projects requiring detailed modelling of building elements, openings, roof forms and other visual details.</p>
+        </div>
+        <div class="price-card">
+          <h4>3D Rendering</h4>
+          <p class="price-card__amount">From R500 / view</p>
+          <p>Final pricing depends on the level of detail, materials, lighting and post-production required.</p>
+        </div>
+        <div class="price-card">
+          <h4>As-Built Drafting</h4>
+          <p class="price-card__amount">From R1,500</p>
+          <p>Digital drafting based on accurate measurements, sketches, photographs or other supplied information.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="service-group">
+      <h4>CAD Documentation &amp; Drafting Support</h4>
+      <div class="price-card" style="max-width:100%;">
+        <h4>Hourly Rate</h4>
+        <p class="price-card__amount">R250 / hour</p>
+        <p style="margin-bottom:16px;">Suitable for:</p>
+        <ul class="service-list">
+          <li><svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>CAD cleanup &amp; redrawing</li>
+          <li><svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>Drawing updates, dimensioning &amp; annotation</li>
+          <li><svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>Sheet setup &amp; file organisation</li>
+          <li><svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>PDF/DWG conversion</li>
+          <li><svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>Drafting support for professionals and contractors</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GRAPHIC DESIGN ===================== -->
+  <section class="section">
+    <div class="section-head section-head--left">
+      <h2>Graphic Design Pricing</h2>
+      <p>Most items are shown "from" a starting price — particularly complex briefs are quoted separately.</p>
+    </div>
+
+    <table class="pricing-table">
+      <thead>
+        <tr><th>Service</th><th>Starting Price</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Social / ad poster</td><td class="price">From R150</td></tr>
+        <tr><td>Standard social / ad poster</td><td class="price">R200</td></tr>
+        <tr><td>6-page menu</td><td class="price">From R720</td></tr>
+        <tr><td>Business card</td><td class="price">From R150</td></tr>
+        <tr><td>Letterhead</td><td class="price">From R100</td></tr>
+        <tr><td>Logo design</td><td class="price">From R250</td></tr>
+        <tr><td>Stationery bundle</td><td class="price">From R480</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===================== PERSISTENT POLICY NOTICE ===================== -->
+  <section class="section">
+    <div class="notice-panel">
+      <strong>Payment:</strong> pay in full upfront, or a minimum deposit of
+      R1,000 before drafting commences with the balance due on completion.
+      Larger projects may use a custom payment schedule stated in the quotation.
+      <br><br>
+      <strong>Scope changes:</strong> the quoted price covers the agreed
+      scope. Additional drawings, major revisions, changes to supplied
+      information, extra design development, substantial redrafting or
+      additional 3D modelling will be quoted separately or charged at the
+      applicable hourly rate before that work begins.
+      <br><br>
+      <strong>Professional notice:</strong> MTD Studio provides technical
+      drafting, CAD conversion, documentation and 3D modelling services —
+      not architectural professional services, certification or sign-off.
+      Where drawings are required for statutory or municipal purposes, the
+      client remains responsible for appointing the appropriately registered
+      professional. Municipal submission, professional consultant and
+      structural engineering fees are not included unless stated in the quotation.
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="cta-banner">
+      <h2>Ready to get a quote?</h2>
+      <p>Share your project details and we'll come back with an indication of cost.</p>
+      <a href="contact.html" class="cta-primary">Request a Quote</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="assets/favicon.png" alt="" width="20" height="20">
+        <span>MTD Studio</span>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="studio.html">Studio</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer__copy">&copy; <span id="year"></span> MTD Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

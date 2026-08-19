@@ -129,16 +129,18 @@
       if (isPlaceholder) {
         e.preventDefault();
         status.textContent =
-          "Form isn't connected yet — add your Formspree endpoint in index.html.";
+          "Form isn't connected yet — add your Formspree endpoint in this page's HTML.";
         status.className = "form-status is-error";
         return;
       }
 
       e.preventDefault();
+      const labelEl = submitBtn.querySelector(".submit-btn__label");
+      const originalLabel = labelEl ? labelEl.textContent : "Send";
       status.textContent = "";
       status.className = "form-status";
       submitBtn.disabled = true;
-      submitBtn.querySelector(".submit-btn__label").textContent = "Sending…";
+      if (labelEl) labelEl.textContent = "Sending…";
 
       fetch(action, {
         method: "POST",
@@ -148,7 +150,7 @@
         .then((res) => {
           if (res.ok) {
             form.reset();
-            status.textContent = "Thanks — we'll be in touch at launch.";
+            status.textContent = "Thanks — we'll be in touch shortly.";
             status.className = "form-status is-success";
           } else {
             throw new Error("Request failed");
@@ -160,9 +162,40 @@
         })
         .finally(() => {
           submitBtn.disabled = false;
-          submitBtn.querySelector(".submit-btn__label").textContent =
-            "Notify Me";
+          if (labelEl) labelEl.textContent = originalLabel;
         });
     });
+  }
+
+  /* ---------- Active nav link (multi-page site) ---------- */
+  const currentFile =
+    location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".site-nav a, .mobile-nav a").forEach((a) => {
+    const href = (a.getAttribute("href") || "").split("/").pop();
+    const isHome =
+      (currentFile === "" || currentFile === "index.html") &&
+      (href === "" || href === "index.html");
+    if (href === currentFile || isHome) {
+      a.classList.add("is-active");
+    }
+  });
+
+  /* ---------- Pricing disclaimer dialog ---------- */
+  const disclaimer = document.getElementById("pricingDisclaimer");
+  const reopenBtn = document.getElementById("reopenDisclaimer");
+
+  if (disclaimer && typeof disclaimer.showModal === "function") {
+    // Show once per browser session so repeat visits aren't interrupted.
+    const seen = sessionStorage.getItem("mtd_pricing_disclaimer_seen");
+    if (!seen) {
+      disclaimer.showModal();
+      sessionStorage.setItem("mtd_pricing_disclaimer_seen", "1");
+    }
+    disclaimer.querySelectorAll("[data-close-dialog]").forEach((btn) => {
+      btn.addEventListener("click", () => disclaimer.close());
+    });
+  }
+  if (reopenBtn && disclaimer && typeof disclaimer.showModal === "function") {
+    reopenBtn.addEventListener("click", () => disclaimer.showModal());
   }
 })();
