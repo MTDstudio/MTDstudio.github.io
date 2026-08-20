@@ -116,3 +116,5 @@ When you have real project photography and case studies:
 3. Consider splitting `studio.html` into per-discipline pages if the
    galleries grow large (e.g. `studio-built-environment.html`), linking
    from the pathway cards on `index.html` and the Studio page itself.-->
+
+   
