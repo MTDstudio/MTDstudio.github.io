@@ -27,7 +27,7 @@ mtd-portfolio/
 Every page shares the same header (with a scroll-aware sticky nav + mobile
 hamburger menu) and footer, so navigation is consistent site-wide.
 
-## Why the Studio page still has a countdown
+<!--## Why the Studio page still has a countdown
 
 Per your notes, the Studio page's real content — project photos, drawings
 and case studies — isn't ready yet. Rather than show an empty gallery, that
@@ -37,7 +37,7 @@ page, alongside short previews of the three disciplines (Built Environment
 Once you have real project images and links, replace the `<section
 class="disciplines">` blocks in `studio.html` with actual project cards —
 the rest of the site (Home, Services, Pricing, About, Contact) is fully
-built out already.
+built out already.-->
 
 ## 1. Publish on GitHub Pages (drag & drop)
 
@@ -105,7 +105,7 @@ and the `.notice-panel` further down.
 - **Logo/icon** — swap files inside `assets/` (keep filenames, or update
   `src` paths across all pages).
 
-## 6. Filling in the Studio page later
+<!--## 6. Filling in the Studio page later
 
 When you have real project photography and case studies:
 
@@ -115,4 +115,4 @@ When you have real project photography and case studies:
    `.discipline-card` styling.
 3. Consider splitting `studio.html` into per-discipline pages if the
    galleries grow large (e.g. `studio-built-environment.html`), linking
-   from the pathway cards on `index.html` and the Studio page itself.
+   from the pathway cards on `index.html` and the Studio page itself.-->
