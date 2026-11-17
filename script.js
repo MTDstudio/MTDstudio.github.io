@@ -10,8 +10,8 @@
      Set your real launch date/time here (local time, ISO format).
      Example: '2026-09-15T09:00:00'
   --------------------------------- */
-  const LAUNCH_DATE = new Date("2026-09-15T09:00:00");
-  const LAUNCH_ANNOUNCED = new Date("2026-08-02T00:00:00"); // used only for progress bar
+  const LAUNCH_DATE = new Date("2027-09-15T09:00:00");
+  const LAUNCH_ANNOUNCED = new Date("2027-08-02T00:00:00"); // used only for progress bar
 
   const els = {
     days: document.getElementById("days"),
