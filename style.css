@@ -650,13 +650,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    PAGE HEADER (inner pages: Studio / Services / Pricing / About / Contact)
    ============================================================ */
 .page-header{
-  max-width: var(--container);
-  margin: 0 auto;
+  width:min(100%, var(--container));
+  margin:0 auto;
   padding:48px 28px 12px;
   display:grid;
-  grid-template-columns:minmax(180px, 1fr) minmax(220px, 1fr) minmax(300px, 1.4fr);
+  grid-template-columns:minmax(150px, 0.9fr) minmax(180px, 0.8fr) minmax(260px, 1.3fr);
+  justify-content:center;
   align-items:center;
-  gap:20px;
+  gap:clamp(12px, 1.8vw, 20px);
   text-align:left;
 }
 .page-header .eyebrow{
@@ -674,7 +675,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   letter-spacing:-0.02em;
   line-height:1.05;
   text-transform:none;
-  color:var(--red);
+  color:var(--text-dim);
 }
 .page-header h1{
   grid-column:2;
@@ -703,8 +704,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   text-align:left;
 }
 .page-header--studio{
-  grid-template-columns:minmax(180px, 1fr) minmax(220px, 1fr) minmax(300px, 1.4fr);
-  gap:20px;
+  grid-template-columns:minmax(150px, 0.9fr) minmax(180px, 0.8fr) minmax(260px, 1.3fr);
+  gap:clamp(12px, 1.8vw, 20px);
   padding-top:48px;
   padding-bottom:12px;
 }
@@ -728,6 +729,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   letter-spacing:-0.02em;
   line-height:1.05;
   text-transform:none;
+  color:var(--text-dim);
 }
 .page-header--studio h1{
   grid-column:2;
@@ -740,6 +742,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   justify-self:end;
   max-width:560px;
   text-align:left;
+}
+.page-header:not(:has(> p:not(.eyebrow):not(.badge-pill))) .eyebrow,
+.page-header--studio:not(:has(> p:not(.badge-pill))){
+  border-right:0;
+}
+.page-header:not(:has(> p:not(.eyebrow):not(.badge-pill))) h1{
+  border-right:0;
+  padding-right:0;
+}
+.page-header--studio:not(:has(> p:not(.badge-pill))) .badge-pill,
+.page-header--studio:not(:has(> p:not(.badge-pill))) h1{
+  border-right:0;
 }
 
 .badge-pill{
