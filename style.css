@@ -652,31 +652,44 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .page-header{
   max-width: var(--container);
   margin: 0 auto;
-  padding: 64px 28px 20px;
+  padding:48px 28px 12px;
   display:grid;
-  grid-template-columns: minmax(180px, 1fr) minmax(220px, 1fr) minmax(300px, 1.4fr);
+  grid-template-columns:minmax(180px, 1fr) minmax(220px, 1fr) minmax(300px, 1.4fr);
   align-items:center;
-  gap:28px;
+  gap:20px;
   text-align:left;
 }
 .page-header .eyebrow{
-  justify-self:start;
+  justify-self:stretch;
   display:flex;
   align-items:center;
   gap:8px;
   margin:0;
+  padding-right:20px;
+  border-right:1px solid var(--stroke-hi);
   text-align:left;
-  font-size:13px;
+  font-family:var(--font-display);
+  font-size:clamp(32px, 4.4vw, 50px);
+  font-weight:800;
+  letter-spacing:-0.02em;
+  line-height:1.05;
+  text-transform:none;
+  color:var(--red);
 }
 .page-header h1{
   grid-column:2;
   grid-row:1;
+  min-height:50px;
+  display:flex;
+  align-items:center;
   font-family: var(--font-display);
   font-size: clamp(32px, 4.4vw, 50px);
   font-weight:800;
   letter-spacing:-0.02em;
   margin:0;
-  text-align:center;
+  padding:0 20px;
+  border-right:1px solid var(--stroke-hi);
+  text-align:left;
 }
 .page-header p:not(.eyebrow):not(.badge-pill){
   grid-column:3;
@@ -689,14 +702,45 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   line-height:1.65;
   text-align:left;
 }
+.page-header--studio{
+  grid-template-columns:minmax(180px, 1fr) minmax(220px, 1fr) minmax(300px, 1.4fr);
+  gap:20px;
+  padding-top:48px;
+  padding-bottom:12px;
+}
 .page-header--studio .badge-pill{
   grid-column:1;
   grid-row:1;
-  justify-self:start;
+  justify-self:stretch;
+  display:flex;
+  align-items:center;
+  gap:8px;
   margin:0;
+  padding:0 20px 0 0;
+  border:0;
+  border-right:1px solid var(--stroke-hi);
+  border-radius:0;
+  background:none;
+  color:var(--red);
+  font-family:var(--font-display);
+  font-size:clamp(32px, 4.4vw, 50px);
+  font-weight:800;
+  letter-spacing:-0.02em;
+  line-height:1.05;
+  text-transform:none;
 }
-.page-header--studio h1{ grid-column:2; }
-.page-header--studio p:not(.badge-pill){ grid-column:3; }
+.page-header--studio h1{
+  grid-column:2;
+  grid-row:1;
+  text-align:left;
+}
+.page-header--studio p:not(.badge-pill){
+  grid-column:3;
+  grid-row:1;
+  justify-self:end;
+  max-width:560px;
+  text-align:left;
+}
 
 .badge-pill{
   display:inline-flex;
