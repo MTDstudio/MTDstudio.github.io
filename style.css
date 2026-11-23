@@ -653,23 +653,50 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   max-width: var(--container);
   margin: 0 auto;
   padding: 64px 28px 20px;
-  text-align:center;
+  display:grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(220px, 1fr) minmax(300px, 1.4fr);
+  align-items:center;
+  gap:28px;
+  text-align:left;
 }
-.page-header .eyebrow{ justify-content:center; display:flex; align-items:center; gap:8px; }
+.page-header .eyebrow{
+  justify-self:start;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin:0;
+  text-align:left;
+  font-size:13px;
+}
 .page-header h1{
+  grid-column:2;
+  grid-row:1;
   font-family: var(--font-display);
   font-size: clamp(32px, 4.4vw, 50px);
   font-weight:800;
   letter-spacing:-0.02em;
-  margin: 0 0 16px;
+  margin:0;
+  text-align:center;
 }
-.page-header p{
-  max-width: 560px;
-  margin: 0 auto;
-  color: var(--text-dim);
-  font-size: 16px;
+.page-header p:not(.eyebrow):not(.badge-pill){
+  grid-column:3;
+  grid-row:1;
+  max-width:560px;
+  justify-self:end;
+  margin:0;
+  color:var(--text-dim);
+  font-size:15px;
   line-height:1.65;
+  text-align:left;
 }
+.page-header--studio .badge-pill{
+  grid-column:1;
+  grid-row:1;
+  justify-self:start;
+  margin:0;
+}
+.page-header--studio h1{ grid-column:2; }
+.page-header--studio p:not(.badge-pill){ grid-column:3; }
 
 .badge-pill{
   display:inline-flex;
@@ -1213,7 +1240,25 @@ section.section{
   .hero__stats{ gap: 22px; flex-wrap:wrap; }
   .footer__inner{ flex-direction:column; text-align:center; }
 
-  .page-header{ padding: 48px 18px 12px; }
+  .page-header{
+    padding:48px 18px 12px;
+    grid-template-columns:1fr;
+    gap:12px;
+    text-align:center;
+  }
+  .page-header .eyebrow,
+  .page-header--studio .badge-pill{
+    justify-self:center;
+  }
+  .page-header h1,
+  .page-header p:not(.eyebrow):not(.badge-pill){
+    grid-column:1;
+    grid-row:auto;
+  }
+  .page-header p:not(.eyebrow):not(.badge-pill){
+    justify-self:center;
+    text-align:center;
+  }
   section.section{ padding: 28px 18px; }
   .quick-links{ grid-template-columns: 1fr; }
   .pricing-table{ display:block; overflow-x:auto; }
