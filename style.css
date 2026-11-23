@@ -1299,23 +1299,39 @@ section.section{
   .footer__inner{ flex-direction:column; text-align:center; }
 
   .page-header{
-    padding:48px 18px 12px;
-    grid-template-columns:1fr;
-    gap:12px;
-    text-align:center;
+    width:100%;
+    padding:32px 18px 12px;
+    grid-template-columns:minmax(0, 1fr);
+    justify-items:stretch;
+    align-items:start;
+    gap:8px;
+    text-align:left;
   }
   .page-header .eyebrow,
   .page-header--studio .badge-pill{
-    justify-self:center;
+    justify-self:start;
+    padding:0;
+    border:0;
+    text-align:left;
   }
   .page-header h1,
   .page-header p:not(.eyebrow):not(.badge-pill){
     grid-column:1;
     grid-row:auto;
+    justify-self:start;
+    width:100%;
+    padding:0;
+    border:0;
+    text-align:left;
   }
   .page-header p:not(.eyebrow):not(.badge-pill){
-    justify-self:center;
-    text-align:center;
+    max-width:none;
+    margin:0;
+  }
+  .page-header--studio .badge-pill{
+    background:none;
+    border-radius:0;
+    color:var(--text-dim);
   }
   section.section{ padding: 28px 18px; }
   .quick-links{ grid-template-columns: 1fr; }

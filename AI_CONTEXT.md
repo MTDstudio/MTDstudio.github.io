@@ -78,8 +78,8 @@ Desktop behavior:
 
 Mobile behavior:
 - Stack the eyebrow, title, and description.
-- Center the stacked header.
-- Remove column separators.
+- Keep every item left-aligned, in eyebrow, title, description order.
+- Remove all vertical column separators and divider padding.
 - Reduce header padding and avoid horizontal overflow.
 
 ## Metadata conventions
@@ -120,6 +120,7 @@ Mobile behavior:
 - Added conditional vertical dividers for headers with descriptions.
 - Applied consistent header behavior to Studio with `Launching Soon` as the left eyebrow.
 - Removed the clock icon from Studio's `Launching Soon` eyebrow.
+- Updated narrow page headers to stack eyebrow, title, and description in that order, left-aligned with no vertical dividers; CSS validation passed.
 - Moved Studio's countdown below the portfolio disciplines and before the footer.
 - Moved the pricing policy reopen button immediately before the quote CTA.
 - Updated index quick links to `What We Do -> Services` and `Work With Us -> Pricing`.
